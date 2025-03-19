@@ -1,0 +1,305 @@
+[
+  {
+    "type": "derived",
+    "formula": "3*didLeaveStartingZone + 7*autoCoralL4 + 6*autoCoralL3 + 4*autoCoralL2 + 3*autoCoralL1 + 6*autoAlgaeProc + 4*autoAlgaeNet",
+    "id": "totalAutoPoints"
+  },
+  {
+    "type": "derived",
+    "formula": "5*teleopCoralL4 + 4*teleopCoralL3 + 3*teleopCoralL2 + 2*teleopCoralL1 + 2*teleopAlgaeProc + 4*teleopAlgaeNet",
+    "id": "totalTeleopPoints"
+  },
+  {
+    "type": "derived",
+    "formula": "multiselect(bargeStatus, 'Not Parked', 0, 'Parked', 2, 'Shallow Cage', 6, 'Deep Cage', 12)",
+    "id": "totalEndgamePoints"
+  },
+  {
+    "type": "derived",
+    "formula": "totalAutoPoints + totalTeleopPoints + totalEndgamePoints",
+    "id": "contributedPoints"
+  },
+  {
+    "type": "derived",
+    "formula": "autoCoralL4 + autoCoralL3 + autoCoralL2 + autoCoralL1",
+    "id": "totalAutoCoral"
+  },
+  {
+    "type": "derived",
+    "formula": "teleopCoralL4 + teleopCoralL3 + teleopCoralL2 + teleopCoralL1",
+    "id": "totalTeleopCoral"
+  },
+  {
+    "type": "derived",
+    "formula": "totalAutoCoral + totalTeleopCoral",
+    "id": "totalCoral"
+  },
+  {
+    "type": "derived",
+    "formula": "autoAlgaeProc + autoAlgaeNet",
+    "id": "totalAutoAlgae"
+  },
+  {
+    "type": "derived",
+    "formula": "teleopAlgaeProc + teleopAlgaeNet",
+    "id": "totalTeleopAlgae"
+  },
+  {
+    "type": "derived",
+    "formula": "totalAutoAlgae + totalTeleopAlgae",
+    "id": "totalAlgae"
+  },
+  {
+    "type": "header",
+    "label": "Autonomous"
+  },
+  {
+    "type": "multiselect",
+    "label": "Starting Position",
+    "options": [
+      "Not There",
+      "Processor Side",
+      "Middle",
+      "Cage Side"
+    ],
+    "id": "startingPosition"
+  },
+  {
+    "type": "checkbox",
+    "label": "Did they end auto outside the starting zone?",
+    "id": "didLeaveStartingZone"
+  },
+  {
+    "type": "subheader",
+    "label": "Coral"
+  },
+  {
+    "type": "counter",
+    "label": "Coral scored on L4",
+    "id": "autoCoralL4",
+    "allow_negative": false,
+    "variant": "standard"
+  },
+  {
+    "type": "counter",
+    "label": "Coral scored on L3",
+    "id": "autoCoralL3",
+    "allow_negative": false,
+    "variant": "standard"
+  },
+  {
+    "type": "counter",
+    "label": "Coral scored on L2",
+    "id": "autoCoralL2",
+    "allow_negative": false,
+    "variant": "standard"
+  },
+  {
+    "type": "counter",
+    "label": "Coral scored on L1",
+    "id": "autoCoralL1",
+    "allow_negative": false,
+    "variant": "standard"
+  },
+  {
+    "type": "counter",
+    "label": "Failed coral scores?",
+    "id": "autoCoralFail",
+    "allow_negative": false,
+    "variant": "standard"
+  },
+  {
+    "type": "subheader",
+    "label": "Algae"
+  },
+  {
+    "type": "counter",
+    "label": "Algae scored in the processor",
+    "id": "autoAlgaeProc",
+    "allow_negative": false,
+    "variant": "standard"
+  },
+  {
+    "type": "counter",
+    "label": "Algae scored in the net",
+    "id": "autoAlgaeNet",
+    "allow_negative": false,
+    "variant": "standard"
+  },
+  {
+    "type": "counter",
+    "label": "Algae cleared from reef",
+    "id": "autoAlgaeClear",
+    "allow_negative": false,
+    "variant": "standard"
+  },
+  {
+    "type": "counter",
+    "label": "Failed algae score?",
+    "id": "autoAlgaeFail",
+    "allow_negative": false,
+    "variant": "standard"
+  },
+  {
+    "type": "spacer"
+  },
+  {
+    "type": "header",
+    "label": "Teleoperated"
+  },
+  {
+    "type": "subheader",
+    "label": "Coral"
+  },
+  {
+    "type": "counter",
+    "label": "Coral scored on L4",
+    "id": "teleopCoralL4",
+    "allow_negative": false,
+    "variant": "standard"
+  },
+  {
+    "type": "counter",
+    "label": "Coral scored on L3",
+    "id": "teleopCoralL3",
+    "allow_negative": false,
+    "variant": "standard"
+  },
+  {
+    "type": "counter",
+    "label": "Coral scored on L2",
+    "id": "teleopCoralL2",
+    "allow_negative": false,
+    "variant": "standard"
+  },
+  {
+    "type": "counter",
+    "label": "Coral scored on L1",
+    "id": "teleopCoralL1",
+    "allow_negative": false,
+    "variant": "standard"
+  },
+  {
+    "type": "counter",
+    "label": "Failed coral score?",
+    "id": "teleopCoralFail",
+    "allow_negative": false,
+    "variant": "standard"
+  },
+  {
+    "type": "subheader",
+    "label": "Algae"
+  },
+  {
+    "type": "counter",
+    "label": "Algae scored in the processor",
+    "id": "teleopAlgaeProc",
+    "allow_negative": false,
+    "variant": "standard"
+  },
+  {
+    "type": "counter",
+    "label": "Algae scored in the net",
+    "id": "teleopAlgaeNet",
+    "allow_negative": false,
+    "variant": "standard"
+  },
+  {
+    "type": "counter",
+    "label": "Algae cleared from reef",
+    "id": "teleopAlgaeClear",
+    "allow_negative": false,
+    "variant": "standard"
+  },
+  {
+    "type": "counter",
+    "label": "Failed algae score?",
+    "id": "teleopAlgaeFail",
+    "allow_negative": false,
+    "variant": "standard"
+  },
+  {
+    "type": "subheader",
+    "label": "Defense and Fouls"
+  },
+  {
+    "type": "checkbox",
+    "label": "Robot played defense",
+    "id": "didDefense"
+  },
+  {
+    "type": "counter",
+    "label": "Total minor fouls",
+    "id": "totalMinorFouls",
+    "allow_negative": false,
+    "variant": "standard"
+  },
+  {
+    "type": "counter",
+    "label": "Total major fouls",
+    "id": "totalMajorFouls",
+    "allow_negative": false,
+    "variant": "standard"
+  },
+  {
+    "type": "spacer"
+  },
+  {
+    "type": "header",
+    "label": "Endgame"
+  },
+  {
+    "type": "slider",
+    "variant": "standard",
+    "label": "How much time was on the clock when they started climbing?",
+    "options": {
+      "min": 0,
+      "max": 30,
+      "step": 1
+    },
+    "id": "climbingStartTime"
+  },
+  {
+    "type": "multiselect",
+    "label": "Barge Status",
+    "options": [
+      "Not Parked",
+      "Parked",
+      "Shallow Cage",
+      "Deep Cage"
+    ],
+    "id": "bargeStatus"
+  },
+  {
+    "type": "spacer"
+  },
+  {
+    "type": "header",
+    "label": "General"
+  },
+  {
+    "type": "checkbox",
+    "label": "Died during the match (or never started)?",
+    "id": "diedDuringMatch"
+  },
+  {
+    "type": "checkbox",
+    "label": "Recovered from freeze?",
+    "id": "recoveredFromFreeze"
+  },
+  {
+    "type": "checkbox",
+    "label": "Did they get a yellow card?",
+    "id": "didYellowCard"
+  },
+  {
+    "type": "checkbox",
+    "label": "Did they get a red card?",
+    "id": "didRedCard"
+  },
+  {
+    "type": "textblock",
+    "label": "Other comments and notes",
+    "id": "otherNotes"
+  }
+]
