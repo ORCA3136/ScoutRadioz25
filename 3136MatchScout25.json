@@ -36,6 +36,16 @@
   },
   {
     "type": "derived",
+    "formula": "autoCoralFail + teleopCoralFail",
+    "id": "totalCoralFail"
+  },
+  {
+    "type": "derived",
+    "formula": "(totalCoral / (totalCoral + totalCoralFail)) * 100",
+    "id": "coralSuccessPercent"
+  },
+  {
+    "type": "derived",
     "formula": "autoAlgaeProc + autoAlgaeNet",
     "id": "totalAutoAlgae"
   },
@@ -48,6 +58,16 @@
     "type": "derived",
     "formula": "totalAutoAlgae + totalTeleopAlgae",
     "id": "totalAlgae"
+  },
+  {
+    "type": "derived",
+    "formula": "autoAlgaeFail + teleopAlgaeFail",
+    "id": "totalAlgaeFail"
+  },
+  {
+    "type": "derived",
+    "formula": "(totalAlgae / (totalAlgae + totalAlgaeFail)) * 100",
+    "id": "algaeSuccessPercent"
   },
   {
     "type": "header",
