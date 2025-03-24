@@ -1,11 +1,15 @@
 [
   {
     "type": "header",
+    "label": "Questions and Observations are labelled in parentheses. Please do not ask something that is labelled an observation unless you are entirely unsure."
+  },
+  {
+    "type": "header",
     "label": "Drive Base"
   },
   {
     "type": "multiselect",
-    "label": "Drive base type",
+    "label": "Drive base type (Question)",
     "id": "driveBaseType",
     "options": [
       "Swerve",
@@ -15,31 +19,18 @@
     ]
   },
   {
-    "type": "slider",
-    "variant": "standard",
-    "label": "Drive Base Length with bumpers on (inches)",
-    "id": "driveBaseLength",
-    "options": {
-      "min": 20,
-      "max": 44,
-      "step": 0.5
-    }
+    "type": "multiselect",
+    "label": "Robot drive base shape (Observation)",
+    "options": [
+      "Square",
+      "Rectangle"
+    ],
+    "id": "driveBaseShape"
   },
   {
     "type": "slider",
     "variant": "standard",
-    "label": "Drive Base Width with bumpers on (inches)",
-    "id": "driveBaseWidth",
-    "options": {
-      "min": 20,
-      "max": 44,
-      "step": 0.5
-    }
-  },
-  {
-    "type": "slider",
-    "variant": "standard",
-    "label": "Robot Starting Height (inches)",
+    "label": "Robot Starting Height (inches) (Question)",
     "id": "robotStartHeight",
     "options": {
       "min": 12,
@@ -50,7 +41,7 @@
   {
     "type": "slider",
     "variant": "standard",
-    "label": "Robot Maximum Height (inches)",
+    "label": "Robot Maximum Height (inches) (Question)",
     "id": "robotMaxHeight",
     "options": {
       "min": 8,
@@ -61,7 +52,7 @@
   {
     "type": "slider",
     "variant": "standard",
-    "label": "Robot Weight (lbs)",
+    "label": "Robot Weight (lbs) (Question)",
     "id": "robotWeight",
     "options": {
       "min": 50,
@@ -72,7 +63,7 @@
   {
     "type": "slider",
     "variant": "standard",
-    "label": "Quality of bumpers?",
+    "label": "Quality of bumpers? (Observation)",
     "id": "bumperQuality",
     "options": {
       "min": 1,
@@ -82,11 +73,11 @@
   },
   {
     "type": "multiselect",
-    "label": "Center of Gravity",
+    "label": "Center of Gravity (Observation)",
     "options": [
       "Low",
       "Middle (Kinda Top Heavy)",
-      "High (Easy to Fall Over)"
+      "High (Likely to Tip Over)"
     ],
     "id": "driveCenterOfGravity"
   },
@@ -99,53 +90,57 @@
   },
   {
     "type": "multiselect",
-    "label": "Coral pickup area?",
+    "label": "Coral Manipulation (Question)",
     "options": [
-      "Floor",
-      "Human Player Station",
-      "Both",
-      "N/A, cannot manipulate coral"
+      "None",
+      "Human Player Station Intake",
+      "Ground Intake"
     ],
-    "id": "coralPickup"
+    "id": "coralManipulation"
   },
   {
     "type": "checkbox",
-    "label": "Coral L4?",
+    "label": "Coral L4? (Question)",
     "id": "teleopL4Coral"
   },
   {
     "type": "checkbox",
-    "label": "Coral L3?",
+    "label": "Coral L3? (Question)",
     "id": "teleopL3Coral"
   },
   {
     "type": "checkbox",
-    "label": "Coral L2?",
+    "label": "Coral L2? (Question)",
     "id": "teleopL2Coral"
   },
   {
     "type": "checkbox",
-    "label": "Coral L1?",
+    "label": "Coral L1? (Question)",
     "id": "teleopL1Coral"
   },
   {
     "type": "checkbox",
-    "label": "Clear reef algae?",
+    "label": "Clear reef algae? (Question)",
     "id": "teleopAlgaeClear"
   },
   {
     "type": "checkbox",
-    "label": "Process algae?",
+    "label": "Process algae? (Question)",
     "id": "teleopAlgaeProcess"
   },
   {
     "type": "checkbox",
-    "label": "Score algae in net?",
+    "label": "Score algae in net? (Question)",
     "id": "teleopAlgaeNet"
   },
   {
+    "type": "checkbox",
+    "label": "Ground algae pickup? (Question)",
+    "id": "teleopAlgaeGround"
+  },
+  {
     "type": "textblock",
-    "label": "List what they can do in teleop",
+    "label": "Teleop Notes (Observation or additional information gained in a question)",
     "id": "teleopNotes"
   },
   {
@@ -157,22 +152,22 @@
   },
   {
     "type": "checkbox",
-    "label": "Auto Routines on Processor Side?",
+    "label": "Auto Routines on Processor Side? (Question)",
     "id": "autoProcessorSide"
   },
   {
     "type": "checkbox",
-    "label": "Auto Routines in the Middle?",
+    "label": "Auto Routines in the Middle? (Question)",
     "id": "autoMiddleSide"
   },
   {
     "type": "checkbox",
-    "label": "Auto Routines on the Cage Side?",
+    "label": "Auto Routines on the Cage Side? (Question)",
     "id": "autoCageSide"
   },
   {
     "type": "textblock",
-    "label": "List what they can do in autonomous",
+    "label": "Autonomous Notes (Observation or additonal information gained in a question)",
     "id": "autoRoutineNotes"
   },
   {
@@ -184,7 +179,7 @@
   },
   {
     "type": "multiselect",
-    "label": "Climb?",
+    "label": "Climb? (Question)",
     "options": [
       "Deep Climb",
       "Shallow Climb",
@@ -202,7 +197,7 @@
   {
     "type": "slider",
     "variant": "standard",
-    "label": "How friendly is the team?",
+    "label": "How friendly is the team? (Observation)",
     "id": "howFriendly",
     "options": {
       "min": 1,
