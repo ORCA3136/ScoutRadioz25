@@ -20,9 +20,9 @@
     "label": "Drive Base Length with bumpers on (inches)",
     "id": "driveBaseLength",
     "options": {
-      "min": 24,
-      "max": 40,
-      "step": 1
+      "min": 20,
+      "max": 44,
+      "step": 0.5
     }
   },
   {
@@ -31,9 +31,9 @@
     "label": "Drive Base Width with bumpers on (inches)",
     "id": "driveBaseWidth",
     "options": {
-      "min": 24,
-      "max": 40,
-      "step": 1
+      "min": 20,
+      "max": 44,
+      "step": 0.5
     }
   },
   {
@@ -53,8 +53,8 @@
     "label": "Robot Maximum Height (inches)",
     "id": "robotMaxHeight",
     "options": {
-      "min": 12,
-      "max": 120,
+      "min": 8,
+      "max": 140,
       "step": 1
     }
   },
@@ -64,7 +64,7 @@
     "label": "Robot Weight (lbs)",
     "id": "robotWeight",
     "options": {
-      "min": 60,
+      "min": 50,
       "max": 115,
       "step": 1
     }
@@ -103,7 +103,8 @@
     "options": [
       "Floor",
       "Human Player Station",
-      "Both"
+      "Both",
+      "N/A, cannot manipulate coral"
     ],
     "id": "coralPickup"
   },
