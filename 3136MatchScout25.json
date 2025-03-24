@@ -1,7 +1,7 @@
 [
   {
     "type": "derived",
-    "formula": "3*didLeaveStartingZone + 7*autoCoralL4 + 6*autoCoralL3 + 4*autoCoralL2 + 3*autoCoralL1 + 6*autoAlgaeProc + 4*autoAlgaeNet",
+    "formula": "3*didLeaveStartingZone + 7*autoCoralL4 + 6*autoCoralL3 + 4*autoCoralL2 + 3*autoCoralL1 + 5*autoAlgae",
     "id": "totalAutoPoints"
   },
   {
@@ -46,17 +46,12 @@
   },
   {
     "type": "derived",
-    "formula": "autoAlgaeProc + autoAlgaeNet",
-    "id": "totalAutoAlgae"
-  },
-  {
-    "type": "derived",
     "formula": "teleopAlgaeProc + teleopAlgaeNet",
     "id": "totalTeleopAlgae"
   },
   {
     "type": "derived",
-    "formula": "totalAutoAlgae + totalTeleopAlgae",
+    "formula": "autoAlgae + totalTeleopAlgae",
     "id": "totalAlgae"
   },
   {
@@ -134,28 +129,14 @@
   },
   {
     "type": "counter",
-    "label": "Algae scored in the processor",
-    "id": "autoAlgaeProc",
+    "label": "Algae scored anywhere",
+    "id": "autoAlgae",
     "allow_negative": false,
     "variant": "standard"
   },
   {
     "type": "counter",
-    "label": "Algae scored in the net",
-    "id": "autoAlgaeNet",
-    "allow_negative": false,
-    "variant": "standard"
-  },
-  {
-    "type": "counter",
-    "label": "Algae cleared from reef",
-    "id": "autoAlgaeClear",
-    "allow_negative": false,
-    "variant": "standard"
-  },
-  {
-    "type": "counter",
-    "label": "Failed algae score?",
+    "label": "Algae scoring failure anywhere",
     "id": "autoAlgaeFail",
     "allow_negative": false,
     "variant": "standard"
