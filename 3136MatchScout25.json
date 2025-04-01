@@ -1,7 +1,7 @@
 [
   {
     "type": "derived",
-    "formula": "3*didLeaveStartingZone + 7*autoCoralL4 + 6*autoCoralL3 + 4*autoCoralL2 + 3*autoCoralL1 + 5*autoAlgae",
+    "formula": "3*didLeaveStartingZone + 7*autoCoralL4 + 6*autoCoralL3 + 4*autoCoralL2 + 3*autoCoralL1",
     "id": "totalAutoPoints"
   },
   {
@@ -47,17 +47,7 @@
   {
     "type": "derived",
     "formula": "teleopAlgaeProc + teleopAlgaeNet",
-    "id": "totalTeleopAlgae"
-  },
-  {
-    "type": "derived",
-    "formula": "autoAlgae + totalTeleopAlgae",
     "id": "totalAlgae"
-  },
-  {
-    "type": "derived",
-    "formula": "autoAlgaeFail + teleopAlgaeFail",
-    "id": "totalAlgaeFail"
   },
   {
     "type": "derived",
@@ -124,24 +114,6 @@
     "variant": "standard"
   },
   {
-    "type": "subheader",
-    "label": "Algae"
-  },
-  {
-    "type": "counter",
-    "label": "Algae scored anywhere",
-    "id": "autoAlgae",
-    "allow_negative": false,
-    "variant": "standard"
-  },
-  {
-    "type": "counter",
-    "label": "Algae scoring failure anywhere",
-    "id": "autoAlgaeFail",
-    "allow_negative": false,
-    "variant": "standard"
-  },
-  {
     "type": "spacer"
   },
   {
@@ -193,21 +165,21 @@
   },
   {
     "type": "counter",
-    "label": "Algae scored in the processor",
+    "label": "Algae cleared from reef",
     "id": "teleopAlgaeProc",
     "allow_negative": false,
     "variant": "standard"
   },
   {
     "type": "counter",
-    "label": "Algae scored in the net",
+    "label": "Algae scored in the processor",
     "id": "teleopAlgaeNet",
     "allow_negative": false,
     "variant": "standard"
   },
   {
     "type": "counter",
-    "label": "Algae cleared from reef",
+    "label": "Algae scored in the net",
     "id": "teleopAlgaeClear",
     "allow_negative": false,
     "variant": "standard"
@@ -215,7 +187,7 @@
   {
     "type": "counter",
     "label": "Failed algae score?",
-    "id": "teleopAlgaeFail",
+    "id": "totalAlgaeFail",
     "allow_negative": false,
     "variant": "standard"
   },
@@ -230,15 +202,8 @@
   },
   {
     "type": "counter",
-    "label": "Total minor fouls",
-    "id": "totalMinorFouls",
-    "allow_negative": false,
-    "variant": "standard"
-  },
-  {
-    "type": "counter",
-    "label": "Total major fouls",
-    "id": "totalMajorFouls",
+    "label": "Total fouls (alliance-colored referee flags near robot)",
+    "id": "totalFouls",
     "allow_negative": false,
     "variant": "standard"
   },
@@ -266,6 +231,7 @@
     "options": [
       "Not Parked",
       "Parked",
+      "Failed Climb",
       "Shallow Cage",
       "Deep Cage"
     ],
@@ -289,18 +255,8 @@
     "id": "recoveredFromFreeze"
   },
   {
-    "type": "checkbox",
-    "label": "Did they get a yellow card?",
-    "id": "didYellowCard"
-  },
-  {
-    "type": "checkbox",
-    "label": "Did they get a red card?",
-    "id": "didRedCard"
-  },
-  {
     "type": "textblock",
-    "label": "Other comments and notes",
+    "label": "Other comments and notes (including any yellow/red cards)",
     "id": "otherNotes"
   }
 ]
