@@ -94,7 +94,8 @@
     "options": [
       "None",
       "Human Player Station Intake",
-      "Ground Intake"
+      "Ground Intake",
+      "Both Human Player Station and Ground Intake"
     ],
     "id": "coralManipulation"
   },
